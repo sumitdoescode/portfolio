@@ -3,12 +3,12 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 
 const page = () => {
-    return (
-        <>
-            <Hero />
-            <Projects />
-        </>
-    );
+  return (
+    <>
+      <Hero />
+      <Projects />
+    </>
+  );
 };
 
 export default page;
