@@ -13,7 +13,7 @@ const About = () => {
         <p className="text-muted-foreground mt-2 text-lg">A quick introduction about me</p>
 
         {/* content */}
-        <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8">
+        <div className="mt-10 max-w-3xl space-y-4 text-lg leading-8">
           <p className="text-foreground">
             I started with an interest in design, which led me to web development. After learning <span className="font-mono">HTML, CSS, JavaScript</span>, I got deeply into building clean and interactive UIs.
           </p>

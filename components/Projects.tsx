@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarBadge, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/components/ui/avatar";
 import { Github, ExternalLink } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+
 const projects = [
   {
     id: 1,
@@ -45,10 +46,10 @@ const Projects = () => {
       <Container>
         <h2 className="text-3xl font-bold text-foreground">Featured Projects</h2>
         <p className="text-muted-foreground mt-2 text-lg">Projects that I am most proud of</p>
-        <Separator orientation="horizontal" className="my-4" />
+        {/* <Separator orientation="horizontal" className="my-4" /> */}
 
         {/* project cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-6 md:gap-8 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-6 md:gap-8 mt-10">
           {/* each project card */}
           {projects.map(({ id, name, image, description, techStack, githubLink, liveLink }) => {
             return (

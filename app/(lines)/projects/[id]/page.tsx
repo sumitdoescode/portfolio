@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "@/components/Container";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from "@/components/ui/avatar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb, BreadcrumbEllipsis, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 const projects = [
   {
@@ -50,20 +50,25 @@ const page = async ({ params }: { params: { id: string } }) => {
   return (
     <section className="py-20">
       <Container>
+        {/* breadcrumb */}
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{project?.name}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
         {/* carousel */}
-        <Carousel className="w-full">
-          <CarouselContent>
-            {project?.images.map((image, imageId) => (
-              <CarouselItem key={imageId}>
-                <div className="relative w-full aspect-video">
-                  <Image src={image} alt={`Screenshot ${imageId}`} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 1000px" priority={imageId === 0} />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <ProjectCarousel images={project!.images} />
 
         {/* project details */}
         <div className="mt-12 max-w-3xl">

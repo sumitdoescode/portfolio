@@ -1,29 +1,47 @@
 import React from "react";
-import { Code2, Database, Server, Globe } from "lucide-react";
+import Container from "./Container";
+import Image from "next/image";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const techStack = [
-  { name: "React", icon: Code2 },
-  { name: "Next.js", icon: Code2 },
-  { name: "Node.js", icon: Server },
-  { name: "MongoDB", icon: Database },
-  { name: "Tailwind CSS", icon: Code2 },
+const tech = [
+  { name: "Figma", icon: "/icons/figma.svg" },
+  { name: "Tailwind", icon: "/icons/tailwind.svg" },
+  { name: "JavaScript", icon: "/icons/js.svg" },
+  { name: "TypeScript", icon: "/icons/ts.svg" },
+  { name: "Node.js", icon: "/icons/node.svg" },
+  { name: "React", icon: "/icons/react.svg" },
+  { name: "Next.js", icon: "/icons/next.svg" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg" },
+  { name: "Mongoose", icon: "/icons/mongoose.svg" },
+  { name: "Bun", icon: "/icons/bun.svg" },
+  { name: "Git", icon: "/icons/git.svg" },
+  { name: "GitHub", icon: "/icons/github.svg" },
 ];
 
-const TechStrip = () => {
+const TechStack = () => {
   return (
-    <div className="mt-6 flex flex-wrap gap-3">
-      {techStack.map(({ name, icon: Icon }) => (
-        <div
-          key={name}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-muted/40 border border-white/5 
-          transition-all duration-300 hover:bg-muted/60 hover:scale-105"
-        >
-          <Icon size={14} className="text-muted-foreground" />
-          <span className="text-sm font-mono">{name}</span>
+    <section className="py-20">
+      <Container>
+        <h2 className="text-3xl font-bold">Tech Stack</h2>
+        <p className="text-muted-foreground mt-2 text-lg">Tools and technologies I work with</p>
+
+        {/* grid */}
+        <div className="mt-10 flex items-start gap-4 flex-wrap shrink-0">
+          {tech.map(({ name, icon }, index) => (
+            <Tooltip key={index}>
+              <TooltipTrigger className="transition-all duration-300 hover:scale-120">
+                <Image src={icon} alt={name} width={48} height={48} />
+              </TooltipTrigger>
+              <TooltipContent className="bg-background text-foreground">
+                <p>{name}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
         </div>
-      ))}
-    </div>
+      </Container>
+    </section>
   );
 };
 
-export default TechStrip;
+export default TechStack;

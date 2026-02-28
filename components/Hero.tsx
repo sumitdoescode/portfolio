@@ -1,9 +1,8 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage, AvatarBadge } from "@/components/ui/avatar";
 import Container from "./Container";
-import avatarImage from "@/public/main/avatar.png";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
@@ -48,8 +47,8 @@ const Hero = () => {
     <section className="py-20">
       <Container>
         <Avatar className="size-44 relative">
-          <AvatarImage src={avatarImage.src} alt="@sumit" />
-          <AvatarFallback>SS</AvatarFallback>
+          <AvatarImage src="/main/avatar.png" alt="@sumit" />
+          <AvatarFallback className="text-2xl font-bold">SS</AvatarFallback>
 
           {/* Green dot */}
           <span className="absolute bottom-4 right-4 flex size-4">
@@ -84,6 +83,7 @@ const Hero = () => {
           </Button>
           <Button variant="secondary" size={"lg"} className={"cursor-pointer text-base px-4"}>
             View Projects
+            <ExternalLink />
           </Button>
         </div>
 

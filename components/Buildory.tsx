@@ -9,7 +9,7 @@ const Buildory = () => {
         <h2 className="text-3xl font-bold">Buildory</h2>
         <p className="text-muted-foreground mt-2 text-lg">A small solo web development agency I started out of curiosity.</p>
 
-        <div className="mt-8 max-w-3xl relative">
+        <div className="mt-10 max-w-3xl relative">
           {/* 🔥 soft gradient like project card */}
           <div className="absolute inset-0 rounded-xl bg-linear-to-r from-orange-500 via-pink-500 to-red-500 opacity-5 blur-2xl" />
 
