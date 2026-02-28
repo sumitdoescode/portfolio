@@ -67,7 +67,7 @@ const page = async ({ params }: { params: { id: string } }) => {
 
         {/* project details */}
         <div className="mt-12 max-w-3xl">
-          <h2 className="text-4xl font-bold tracking-tight">{project?.name}</h2>
+          <h2 className="text-3xl font-bold font-mono tracking-tight">{project?.name}</h2>
           <p className="text-muted-foreground mt-2 text-lg">{project?.shortDescription}</p>
 
           {/* description */}

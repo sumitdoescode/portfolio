@@ -43,7 +43,7 @@ const Projects = () => {
   return (
     <section className="py-20">
       <Container>
-        <h2 className="text-4xl font-bold text-foreground">Featured Projects</h2>
+        <h2 className="text-3xl font-bold text-foreground">Featured Projects</h2>
         <p className="text-muted-foreground mt-2 text-lg">Projects that I am most proud of</p>
         <Separator orientation="horizontal" className="my-4" />
 

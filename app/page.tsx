@@ -1,8 +1,10 @@
 import React from "react";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import About from "@/components/About";
 import Buildory from "@/components/Buildory";
+import About from "@/components/About";
+import TechStrip from "@/components/TechStrip";
+import Contact from "@/components/Contact";
 
 const page = () => {
   return (
@@ -11,6 +13,8 @@ const page = () => {
       <Projects />
       <Buildory />
       <About />
+      {/* <TechStrip /> */}
+      <Contact />
     </>
   );
 };

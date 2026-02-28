@@ -7,7 +7,7 @@ const Buildory = () => {
     <section className="py-20">
       <Container>
         <h2 className="text-3xl font-bold">Buildory</h2>
-        <p className="text-muted-foreground mt-2">A small solo web development agency I started out of curiosity.</p>
+        <p className="text-muted-foreground mt-2 text-lg">A small solo web development agency I started out of curiosity.</p>
 
         <div className="mt-8 max-w-3xl relative">
           {/* 🔥 soft gradient like project card */}
