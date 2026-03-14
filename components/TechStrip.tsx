@@ -17,9 +17,9 @@ const tech = [
     { name: "Mongoose", icon: "/icons/mongoose.svg" },
     { name: "Bun", icon: "/icons/bun.svg" },
     { name: "Hono", icon: "/icons/hono.svg" },
+    { name: "Vercel", icon: "/icons/vercel.svg" },
     { name: "AWS", icon: "/icons/aws.svg" },
     { name: "Docker", icon: "/icons/docker.svg" },
-    { name: "Vercel", icon: "/icons/vercel.svg" },
     { name: "Git", icon: "/icons/git.svg" },
     { name: "GitHub", icon: "/icons/github.svg" },
 ];
