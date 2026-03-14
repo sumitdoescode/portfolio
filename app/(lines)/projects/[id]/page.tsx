@@ -2,11 +2,12 @@ import React from "react";
 import Container from "@/components/Container";
 import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from "@/components/ui/avatar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb, BreadcrumbEllipsis, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { notFound } from "next/navigation";
 
 interface IProject {
     id: number;
@@ -94,6 +95,22 @@ const projects: IProject[] = [
 const page = async ({ params }: { params: { id: string } }) => {
     const { id } = await params;
     const project = projects.find((p) => p.id === Number(id));
+    if (!project) {
+        return (
+            <section className="py-20 h-screen flex items-center justify-center">
+                <Container>
+                    <h2 className="text-4xl font-bold font-mono tracking-tight">Project Not Found</h2>
+                    <p className="text-muted-foreground mt-2 text-lg">The project you are looking for does not exist.</p>
+                    <Button className="mt-6" size="lg">
+                        <Link href="/projects" className="flex items-center gap-2">
+                            <ArrowLeft className="h-4 w-4" />
+                            Go Back
+                        </Link>
+                    </Button>
+                </Container>
+            </section>
+        );
+    }
 
     return (
         <section className="py-20">
