@@ -90,9 +90,52 @@ const projects: IProject[] = [
         ],
         liveLink: "https://chatify.page/",
     },
+    {
+        id: 3,
+        name: "YouTube Backend",
+        images: ["/projects/youtube-backend/1.jpg"],
+        shortDescription: "YouTube Backend is a backend for a YouTube with tweets.",
+        longDescription: (
+            <>
+                <p>A scalable YouTube-style backend built with Bun and Hono, designed to handle video content and user interactions efficiently.</p>
+
+                <p>
+                    The system uses <code>MongoDB</code> with <code>Mongoose</code> for data management, while media files are stored using <code>Cloudinary</code> and <code>Vercel Blob</code> for optimized storage and delivery.
+                </p>
+
+                <p>
+                    Secure authentication is implemented using <code>Better Auth</code>, enabling session-based access control for protected routes.
+                </p>
+
+                <p>It includes core features like videos, playlists, tweets, comments, likes, subscriptions, and watch history, closely mimicking a real-world content platform.</p>
+
+                <p>
+                    Built around <strong>50+ production-grade APIs</strong>, covering complex real-world backend scenarios and scalable architecture patterns.
+                </p>
+
+                <p>Advanced querying with pagination, sorting, and filtering ensures efficient data retrieval across endpoints.</p>
+
+                <p>
+                    Input validation is handled using <code>Zod</code>, and global rate limiting improves API security and reliability.
+                </p>
+
+                <p>This project demonstrates a production-ready backend architecture for a modern content-driven platform.</p>
+            </>
+        ),
+        techStack: [
+            { name: "TypeScript", icon: "/icons/ts.svg" },
+            { name: "Bun", icon: "/icons/bun.svg" },
+            { name: "Hono", icon: "/icons/hono.svg" },
+            { name: "MongoDB", icon: "/icons/mongodb.svg" },
+            { name: "Cloudinary", icon: "/icons/cloudinary.svg" },
+            { name: "AWS EC2", icon: "/icons/aws.svg" },
+        ],
+        githubLinks: [{ type: "backend", link: "https://github.com/sumitdoescode/youtube-backend" }],
+        liveLink: "https://youtube-backend.sumitdoescode.me/",
+    },
 ];
 
-const page = async ({ params }: { params: { id: string } }) => {
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const project = projects.find((p) => p.id === Number(id));
     if (!project) {
