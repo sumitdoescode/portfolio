@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 
 const page = () => {
     return (
-        <section className="py-20 h-screen flex items-center justify-center">
+        <section className="py-20">
             <Container>
                 {/* breadcrumb */}
                 <Breadcrumb>
@@ -16,15 +16,12 @@ const page = () => {
                         </BreadcrumbItem>
                         <BreadcrumbSeparator />
                         <BreadcrumbItem>
-                            <BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
                             <BreadcrumbPage>Projects</BreadcrumbPage>
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
-                <h2 className="text-4xl font-bold font-mono tracking-tight">Projects</h2>
+
+                <h2 className="mt-6 text-4xl font-bold font-mono tracking-tight">Projects</h2>
 
                 {/* project cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-6 md:gap-8 mt-10">

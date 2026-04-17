@@ -2,6 +2,9 @@ import React from "react";
 import Container from "./Container";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Projects = () => {
     return (
@@ -16,6 +19,15 @@ const Projects = () => {
                     {projects.map((project) => {
                         return <ProjectCard key={project.id} {...project} />;
                     })}
+                </div>
+
+                <div className="mt-10 flex justify-center">
+                    <Link href="/projects">
+                        <Button variant="secondary" size="lg" className="gap-2">
+                            View All Projects
+                            <ArrowRight />
+                        </Button>
+                    </Link>
                 </div>
             </Container>
         </section>

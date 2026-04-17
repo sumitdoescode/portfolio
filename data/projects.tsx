@@ -123,4 +123,45 @@ export const projects: Project[] = [
         githubLinks: [{ type: "backend", link: "https://github.com/sumitdoescode/youtube-backend" }],
         liveLink: "https://youtube-backend.sumitdoescode.me/",
     },
+    {
+        id: 4,
+        name: "Strongly",
+        images: ["/projects/strongly/1.png"],
+        shortDescription: "Strongly is a platform where regular gym goers can track their attendance + admin can manage the gym members data",
+        longDescription: (
+            <>
+                <p>A scalable YouTube-style backend built with Bun and Hono, designed to handle video content and user interactions efficiently.</p>
+
+                <p>
+                    The system uses <code>MongoDB</code> with <code>Mongoose</code> for data management, while media files are stored using <code>Cloudinary</code> and <code>Vercel Blob</code> for optimized storage and delivery.
+                </p>
+
+                <p>
+                    Secure authentication is implemented using <code>Better Auth</code>, enabling session-based access control for protected routes.
+                </p>
+
+                <p>It includes core features like videos, playlists, tweets, comments, likes, subscriptions, and watch history, closely mimicking a real-world content platform.</p>
+
+                <p>
+                    Built around <strong>50+ production-grade APIs</strong>, covering complex real-world backend scenarios and scalable architecture patterns.
+                </p>
+
+                <p>Advanced querying with pagination, sorting, and filtering ensures efficient data retrieval across endpoints.</p>
+
+                <p>
+                    Input validation is handled using <code>Zod</code>, and global rate limiting improves API security and reliability.
+                </p>
+
+                <p>This project demonstrates a production-ready backend architecture for a modern content-driven platform.</p>
+            </>
+        ),
+        techStack: [
+            { name: "TypeScript", icon: "/icons/ts.svg" },
+            { name: "Next.js", icon: "/icons/next.svg" },
+            { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
+            { name: "MongoDB", icon: "/icons/mongodb.svg" },
+        ],
+        githubLinks: [{ type: "backend", link: "https://github.com/sumitdoescode/strongly" }],
+        liveLink: "https://strongly.vercel.app/",
+    },
 ];
