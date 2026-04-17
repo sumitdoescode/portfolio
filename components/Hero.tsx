@@ -1,10 +1,9 @@
-import React from "react";
-import { Avatar, AvatarFallback, AvatarImage, AvatarBadge } from "@/components/ui/avatar";
 import Container from "./Container";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import HeroAvatar from "./HeroAvatar";
 
 const techSkills = [
     {
@@ -46,19 +45,7 @@ const Hero = () => {
     return (
         <section className="py-20">
             <Container>
-                <Avatar className="size-44 relative">
-                    <AvatarImage src="/main/avatar.jpg" alt="@sumit" />
-                    <AvatarFallback className="text-2xl font-bold">SR</AvatarFallback>
-
-                    {/* Green dot */}
-                    <span className="absolute bottom-4 right-4 flex size-4">
-                        {/* Ping animation */}
-                        <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
-
-                        {/* Solid dot */}
-                        <span className="relative inline-flex size-4 rounded-full bg-green-600 border-2 border-background"></span>
-                    </span>
-                </Avatar>
+                <HeroAvatar />
 
                 {/* content */}
                 <div className="mt-5">

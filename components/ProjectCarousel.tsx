@@ -9,7 +9,7 @@ const ProjectCarousel = ({ images }: { images: string[] }) => {
             className="w-full mt-4"
             plugins={[
                 Autoplay({
-                    delay: 5000, // 5 sec
+                    delay: 3500, // 3.5 sec
                     stopOnInteraction: true,
                 }),
             ]}
