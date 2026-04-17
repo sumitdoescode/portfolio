@@ -6,16 +6,16 @@ import TechStrip from "@/components/TechStrip";
 import Contact from "@/components/Contact";
 
 const page = () => {
-  return (
-    <>
-      <Hero />
-      <TechStrip />
-      <Projects />
-      <Buildory />
-      <About />
-      <Contact />
-    </>
-  );
+    return (
+        <>
+            <Hero />
+            <Projects />
+            <Buildory />
+            <TechStrip />
+            <About />
+            <Contact />
+        </>
+    );
 };
 
 export default page;

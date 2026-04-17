@@ -77,14 +77,19 @@ const Hero = () => {
                 </div>
 
                 <div className="flex items-center gap-2 mt-8">
-                    <Button variant="default" size={"lg"} className={"cursor-pointer text-base px-4"}>
-                        Dowload Resume
-                        <Download />
-                    </Button>
-                    <Button variant="secondary" size={"lg"} className={"cursor-pointer text-base px-4"}>
-                        View Projects
-                        <ExternalLink />
-                    </Button>
+                    <Link href="/projects">
+                        <Button variant="default" size={"lg"} className={"cursor-pointer text-base px-4"}>
+                            Dowload Resume
+                            <Download />
+                        </Button>
+                    </Link>
+
+                    <Link href="/projects">
+                        <Button variant="secondary" size={"lg"} className={"cursor-pointer text-base px-4"}>
+                            View Projects
+                            <ExternalLink />
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* socials */}

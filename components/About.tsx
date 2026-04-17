@@ -10,7 +10,7 @@ const About = () => {
 
       <Container>
         <h2 className="text-3xl font-bold">About Me</h2>
-        <p className="text-muted-foreground mt-2 text-lg">A quick introduction about me</p>
+        <p className="text-muted-foreground mt-2 text-lg">Building scalable full-stack applications with strong backend foundations.</p>
 
         {/* content */}
         <div className="mt-10 max-w-3xl space-y-4 text-lg leading-8">
